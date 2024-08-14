@@ -3,89 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS if using -->
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    #background-video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
-
-    .profile-section {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-    }
-
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    h1, p {
-      margin: 0;
-    }
-
-    .social-links {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .social-links img {
-      width: 30px;
-      margin: 0 10px;
-      filter: invert(100%);
-    }
-
-    @media only screen and (max-width: 600px) {
-      .profile-pic {
-        width: 100px;
-        height: 100px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <title>Fullscreen Background Image with Audio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <video autoplay muted loop id="background-video">
-    <source src="https://www.dropbox.com/scl/fi/osk29s49pekwxy85hqswp/034e11c199785fa2639c337955f868db.mp4?raw=1" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-
+  <!-- Profile section -->
   <div class="profile-section">
-    <img src="your-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+    <div class="profile-pic"></div>
     <h1>Hi, I'm Mario/Reo/Charge. YK, I'm 14, just a mature kid</h1>
     <p>I like Lua and I like blackhatting.</p>
-    <!-- my duo is Reo and I love him -->
+
+    <!-- Social links -->
+    <div class="social-links">
+      <a href="https://pastebin.com/raw/XZ2iFVgU">
+        <img src="https://iili.io/dEJhxPs.png" alt="Discord">
+      </a>
+      <a href="https://www.roblox.com/users/240578456/profile?friendshipSourceType=PlayerSearch">
+        <img src="https://iili.io/dEJ1Sun.png" alt="Roblox">
+      </a>
+    </div>
   </div>
 
-  <div class="social-links">
-    <a href="https://www.roblox.com/users/240578456/profile?friendshipSourceType=PlayerSearch">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP4JAF-haR-qryq24VzogbWxcakOD2SzRklQ&s" alt="Roblox">
-    </a>
-    <a href="https://pastebin.com/raw/XZ2iFVgU">
-      <img src="https://p7.hiclipart.com/preview/842/992/26/discord-computer-servers-teamspeak-discord-icon.jpg" alt="Discord">
-    </a>
-  </div>
-
+  <!-- Audio player -->
+  <audio id="background-audio" autoplay loop>
+    <source src="https://github.com/username/repository/raw/branch/folder/audiofile.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
