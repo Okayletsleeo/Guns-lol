@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.profile-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+h1, p {
+  margin: 0;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links img {
+  width: 30px;
+  margin: 0 10px;
+  filter: invert(100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
